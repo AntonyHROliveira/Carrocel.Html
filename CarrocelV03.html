@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Splide JS Demo</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"/>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <section class="splide" data-splide='{"type":"loop", "autoplay": true, "arrows": false}'>
+
+        <div class="splide__track">
+
+            <ul class="splide__list">
+
+                <li class="splide__slide slide1"> Slide 1
+
+                    <img src="image1.jpg" alt="Imagem de Bolo"/>
+
+                </li>
+
+                <li class="splide__slide slide2"> Slide 2
+
+                    <img src="image2.jpg" alt="Imagem de Bolo"/>
+
+                </li>
+
+                <li class="splide__slide slide3"> Slide 3
+
+                    <img src="image3.jpg" alt="Imagem de Bolo"/>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>    
+
+</body>
+
+<script>
+
+    new Splide(".splide", {
+
+        type       : 'loop',
+
+        autoplay   : true,
+
+        arrows     : false,
+
+    }).mount();
+
+</script>
+
+</html>
+
+<!-- DESCRIÇÃO do CÓDIGO:
+ 
+
+    Autoplay: Adicionei a opção "autoplay": true no atributo data-splide e também no objeto passado para o método new Splide(). Isso faz com que o carrossel avance automaticamente.
+
+    Arrows: Adicionei a opção "arrows": false para desativar as setas de navegação.
+
+    Loop: Adicionei a opção "type": "loop" para que o carrossel volte ao início após o último slide.
+  -->
