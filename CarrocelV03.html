@@ -1,71 +1,63 @@
 <!DOCTYPE html>
 
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Splide JS Demo</title>
 
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-</head>
-
-<body>
-
-    <section class="splide" data-splide='{"type":"loop", "autoplay": true, "arrows": false}'>
-
+  <body>
+    <section class="splide" data-splide='{"type":"loop", "autoplay": true, "arrows": true, "perPage": 2}'><!-- Controla o carrocel-->
+        <!-- Note: 
+            data-splide='{"type":"loop", "autoplay": true, "arrows": true}'
+            "type":"loop", => tipo de carrocel em loop
+            "autoplay": true, => carrocel que passa as imagens automaticamente 
+            "arrows": true => que permite tambem controla as passsagens por meio das setas laterais
+            "arrows": false => sem o uso das setas laterais
+            "perPage": 2 => deixa duas imagens aparecendo ao mesmo tempo
+        -->
+      
         <div class="splide__track">
-
             <ul class="splide__list">
-
-                <li class="splide__slide slide1"> Slide 1
-
-                    <img src="image1.jpg" alt="Imagem de Bolo"/>
-
+                <li class="splide__slide slide1">
+                    Slide 1
+                    <img src="image1.jpg" alt="Imagem de Bolo" />
                 </li>
-
-                <li class="splide__slide slide2"> Slide 2
-
-                    <img src="image2.jpg" alt="Imagem de Bolo"/>
-
+                <li class="splide__slide slide2">
+                    Slide 2
+                    <img src="image2.jpg" alt="Imagem de Bolo" />
                 </li>
-
-                <li class="splide__slide slide3"> Slide 3
-
-                    <img src="image3.jpg" alt="Imagem de Bolo"/>
-
+                <li class="splide__slide slide3">
+                    Slide 3
+                    <img src="image3.jpg" alt="Imagem de Bolo" />
                 </li>
-
             </ul>
-
         </div>
+    </section>
+  </body>
 
-    </section>    
-
-</body>
-
-<script>
-
+  <script>
+    // Controla o carrocel via Js.
     new Splide(".splide", {
+      type: "loop",
 
-        type       : 'loop',
+      autoplay: true,
 
-        autoplay   : true,
-
-        arrows     : false,
-
+      arrows: false,
     }).mount();
-
-</script>
-
+  </script>
 </html>
 
 <!-- DESCRIÇÃO do CÓDIGO:

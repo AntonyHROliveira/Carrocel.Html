@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Splide JS Demo</title>
+    <title>Carrocel</title>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    <!-- biblioteca Splide, que é uma biblioteca para criar sliders/carrosséis. O link aponta para a versão 4.1.4. -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"/>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <section class="splide" data-splide='{"type":"loop", "perPage": 2}'><!-- Conf. o Carrocel-->
+    <section class="splide" data-splide='{"type":"loop"}'><!-- Conf. o Carrocel-->
         
         <div class="splide__track"><!-- Track é a área onde os slides são exibidos. -->
             <ul class="splide__list"><!-- classe="splide__list" => é usada pela biblioteca Splide para estilizar a lista.-->
@@ -27,16 +26,10 @@
                 <!-- class="splide__slide slide1" => Cria duas class diferentes uma da outra. -->
             </ul>
         </div>
-    </section>    
+    </section>  
+    
 </body>
 <script>
-    new Splide(".splide").mount();
-    // Um bloco de script que inicializa o carrossel Splide. A função new Splide(".splide").mount(); cria uma nova instância do carrossel e a monta no elemento com a classe splide.
+     new Splide(".splide").mount();
 </script>
 </html>
-
-<!-- DESCRIÇÃO do CÓDIGO:
- data-splide='{"type":"loop"}'
- => é um atributo que passa um objeto JSON com a propriedade type e o valor loop. Isso faz com que o carrossel seja infinito, ou seja, quando chegar no último slide, ele volta para o primeiro slide.
- => O atributo data-splide contém um objeto JSON que configura o carrossel para ter um tipo de "loop", permitindo que os slides se repitam.
--->
